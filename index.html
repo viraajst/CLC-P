@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodieHub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+        }
+
+        /* Navbar */
+        .navbar {
+            height: 35px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            color: #ff4b1f;
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #222;
+            font-size: 9px;
+        }
+
+        .nav-links a:hover {
+            color: #ff4b1f;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 131px;
+            position: relative;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.38),
+                    rgba(0, 0, 0, 0.38)
+                ),
+                url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            position: absolute;
+            left: 17px;
+            top: 25px;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 23px;
+            line-height: 22px;
+            font-weight: 700;
+            width: 220px;
+            margin-bottom: 10px;
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: #ff5126;
+            color: white;
+            text-decoration: none;
+
+            font-size: 9px;
+            font-weight: bold;
+
+            padding: 6px 13px;
+            border-radius: 4px;
+
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #e63e16;
+            transform: translateY(-1px);
+        }
+
+        /* Menu Heading */
+        .menu-heading {
+            background: white;
+            text-align: center;
+            padding: 25px 10px 8px;
+
+            border-radius: 0 0 6px 6px;
+        }
+
+        .small-title {
+            color: #ff5126;
+            font-size: 9px;
+            margin-bottom: 7px;
+        }
+
+        .menu-heading h2 {
+            font-size: 15px;
+            color: #222;
+        }
+
+        /* Menu Cards */
+        .menu {
+            background: #f8f8f8;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 220px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .card img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 12px;
+        }
+
+        .card-content h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .card-content p {
+            font-size: 11px;
+            color: #777;
+        }
+
+        .price {
+            display: block;
+            color: #ff5126;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 0 10px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 8px;
+            }
+
+            .hero {
+                height: 180px;
+            }
+
+            .hero-content {
+                top: 35px;
+                left: 18px;
+            }
+
+            .hero-content h1 {
+                font-size: 27px;
+                line-height: 26px;
+            }
+
+            .menu-heading {
+                padding-top: 25px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            FoodieHub
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Delicious food,<br>
+                delivered to your<br>
+                door.
+            </h1>
+
+            <a href="#" class="order-btn">
+                Order Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Menu Heading -->
+    <section class="menu-heading">
+
+        <div class="small-title">
+            Food Menu
+        </div>
+
+        <h2>
+            Our Popular Menu
+        </h2>
+
+    </section>
+
+
+    <!-- Food Cards -->
+    <section class="menu">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80">
+
+            <div class="card-content">
+
+                <h3>Cheesy Pizza</h3>
+
+                <p>
+                    Fresh pizza with delicious cheese.
+                </p>
+
+                <span class="price">
+                    ₹249
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80">
+
+            <div class="card-content">
+
+                <h3>Classic Burger</h3>
+
+                <p>
+                    Crispy burger with fresh vegetables.
+                </p>
+
+                <span class="price">
+                    ₹199
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80">
+
+            <div class="card-content">
+
+                <h3>Italian Pasta</h3>
+
+                <p>
+                    Creamy pasta made with fresh ingredients.
+                </p>
+
+                <span class="price">
+                    ₹229
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
